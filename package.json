@@ -1,0 +1,12 @@
+{
+  "name": "thought-cli",
+  "version": "1.0.0",
+  "description": "a command-line interface for organizing thoughts in sections",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
