@@ -234,6 +234,7 @@ function restoreSectionBackup(section, content, overwrite) {
  * Lists all available backups
  * @param {Array} fullBackups - List of full backups
  * @param {Array} sectionBackups - List of section backups
+ * @returns {Array} - Combined list of all backups
  */
 function listBackups(fullBackups = null, sectionBackups = null) {
     if (!fullBackups || !sectionBackups) {
@@ -266,6 +267,9 @@ function listBackups(fullBackups = null, sectionBackups = null) {
 
     console.log("Use /restore <type> <number> to restore a specific backup");
     console.log("Example: /restore full 1 or /restore section 1");
+    
+    // Return the list of backups for programmatic use
+    return [...fullBackups, ...sectionBackups];
 }
 
 /**
